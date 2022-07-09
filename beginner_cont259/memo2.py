@@ -2,11 +2,13 @@ S= (input())
 T=(input())
 
 a =0
-try:
-    for t in T:
-        if S[a] == t:
+
+for t in T:
+    if S[a] == t:
             a+=1
             continue
+
+    else:
         while True:
             if S[a] != t and (S[a-1] == t == S[a-2] or S[a+1] == t ==S[a+2]):
                 S = S[:a] + S[a-1] + S[a:]
@@ -14,11 +16,10 @@ try:
             else:
                 break
 
-except:
     a=0
 
 if S ==T:
     print('Yes')
 else:
     print('No')
-        
+
